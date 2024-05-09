@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/hazem #Database Name
+    username: root #Database Username
+    password: 1234 #Database Password
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    ddl-auto: update
+    enable-lazy-load-no-trans: true
+    naming:
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: true
+  devtools:
+    add-properties: false
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: Shop #(application name)
+  server:
+    port: 8081
